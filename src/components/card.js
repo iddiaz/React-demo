@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-
+import {Link} from 'react-router'
 
 const Card = ({avatar, name, description, id}) => {
 
@@ -15,7 +15,7 @@ const Card = ({avatar, name, description, id}) => {
             <p>{description}</p>
           </div>
           <div className="card-action">
-            <a href={`/teacher/${id}`}>Ir a página de profesor</a>
+            <Link to={`/teacher/${id}`}>Ir a página de profesor</Link>
           </div>
         </div>
       </div>

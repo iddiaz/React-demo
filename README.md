@@ -1,4 +1,4 @@
-# App in REact dd isomorphism
+# Aplicación desarrolla con React, React Router y Redux: Implementación de sistema isomórfico.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
