@@ -6,10 +6,19 @@ import {connect} from 'react-redux'
 import {filterTeachers} from '../actions/searcher'
 
 class Searcher extends Component {
+
+componentDidMount () {
+  if(this.prps.filter) {
+    this.props.onFilter({
+      text: this.props.filter
+    })
+  }
+}
+
   render() {
     return(
         <div>
-          <SearchFilter onFilter={this.props.onFilter} />
+          <SearchFilter filter={this.props.filter} onFilter={this.props.onFilter} />
           <div className='container'>
             <CardList teachers={this.props.teachers} />
           </div>
@@ -31,6 +40,7 @@ Searcher.propTypes = {
 //Ahora faltaria conectar el estado que me provee el store de redux a propiedades que mi contenedor es capaz de entender asi que faltaría implementar las funciones mapStateToProps y mapDispatchToProps 
 const mapStateToProps = (state) => {
   return {
+    ...ownProps.params,
     ...state.searcher
   }  
 }

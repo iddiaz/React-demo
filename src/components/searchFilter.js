@@ -26,7 +26,7 @@ class SearchFilter extends Component {
         <div className="nav-wrapper">
           <form onSubmit={this.handleSubmit}>
             <div className='input-field col s12'>
-              <input onChange={this.handleChange}  ref={(node) => this.input = node} id='search' type='search' required />
+              <input onChange={this.handleChange}  ref={(node) => this.input = node} id='search' type='search' value={this.props.filter} required />
               <label htmlFor='search'><i className='material-icons'>search</i></label>
               <i className='material-icons'>close</i>
             </div>

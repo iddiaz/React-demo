@@ -26,7 +26,7 @@ class App extends Component {
       <Provider store={store} >
         <Router history={browserHistory}>
         {/**Nuestra app la envolvemos dentro de nuestro router creando una ruta para cada path */}
-          <Route path='/' component={Searcher} />
+          <Route path='/(:filter)' component={Searcher} />
           <Route path='/teacher/:id' component={Teacher} />
         </Router>       
       </Provider>
