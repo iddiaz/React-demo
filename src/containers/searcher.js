@@ -8,7 +8,7 @@ import {filterTeachers} from '../actions/searcher'
 class Searcher extends Component {
 
 componentDidMount () {
-  if(this.prps.filter) {
+  if(this.props.filter) {
     this.props.onFilter({
       text: this.props.filter
     })
