@@ -38,7 +38,7 @@ Searcher.propTypes = {
 }
 
 //Ahora faltaria conectar el estado que me provee el store de redux a propiedades que mi contenedor es capaz de entender asi que faltaría implementar las funciones mapStateToProps y mapDispatchToProps 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
   return {
     ...ownProps.params,
     ...state.searcher
